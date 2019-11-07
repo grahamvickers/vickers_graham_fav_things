@@ -1,6 +1,6 @@
 
 nav {
-    background-color: pink;
+    background-color: #2C4859;
 
     ul {
         margin: 0;
@@ -10,4 +10,8 @@ nav {
     }
 
     a { text-decoration: none; }
+
+    a:hover {
+        color: #F2865E;
+    }
 }

@@ -1,5 +1,5 @@
 nav {
-  background-color: pink; }
+  background-color: #2C4859; }
   nav ul {
     margin: 0;
     padding: 0; }
@@ -7,6 +7,8 @@ nav {
       display: inline; }
   nav a {
     text-decoration: none; }
+  nav a:hover {
+    color: #F2865E; }
 
 .team {
   display: flex;
@@ -21,9 +23,11 @@ nav {
       max-width: 200px; }
     .team .user-panel .u-link {
       display: block;
+      width: 50%;
       text-decoration: none;
       margin: 0 auto;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: #F2865E;
+      border-radius: 25px;
       padding: 5px; }
     .team .user-panel h1, .team .user-panel h3 {
       margin: 5px 0; }
@@ -42,7 +46,7 @@ nav {
   top: 0;
   z-index: 5000;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.85); }
+  background-color: rgba(44, 72, 89, 0.85); }
   .lightbox .sidebar {
     flex: 1; }
   .lightbox .lb-content {
@@ -68,18 +72,31 @@ nav {
   padding: 10px; }
 
 body {
-  color: white;
-  background-color: #3f3f3f; }
+  color: #F2865E;
+  background-color: #2C4859;
+  text-align: center; }
 
-h1, h2, h3 {
-  color: #f2f2f2; }
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #F2865E; }
+
+h1 {
+  font-size: 42px; }
+
+p {
+  font-family: 'Poppins', sans-serif; }
+
+a {
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold; }
 
 .panel {
-  min-height: 60vh; }
+  padding: 10px 0 10px 0; }
 
 .panel:nth-child(odd) {
   background-color: #f2f2f2;
-  color: #3f3f3f; }
+  color: #2C4859; }
 
 #to-top {
   position: fixed;
@@ -87,8 +104,17 @@ h1, h2, h3 {
   right: 10px;
   display: none; }
 
+.hidden {
+  display: none; }
+
+#logo {
+  width: 250px; }
+
 footer {
-  color: white; }
+  color: white;
+  text-align: center;
+  background-color: #F2865E;
+  padding: 10px 0 10px 0; }
 
 ul {
   margin: 0;

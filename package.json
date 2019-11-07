@@ -1,5 +1,5 @@
 {
-  "name": "testmodules",
+  "name": "grahams_fav_things",
   "version": "1.0.0",
   "description": "using classes with node and express",
   "main": "app.js",
