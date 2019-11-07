@@ -1,4 +1,8 @@
-footer { color: $footer-text-color }
+footer { color: $footer-text-color;
+    text-align: center;
+    background-color: #F2865E;
+    padding: 10px 0 10px 0;
+}
 
 ul {
     margin: 0;

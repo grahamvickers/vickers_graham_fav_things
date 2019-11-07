@@ -18,7 +18,7 @@ const myVM = (() => {
         
         let bioContent = `
             <p>${person.bio}<p>
-            <h4>Social Media:/<h4>
+            <h4>Age I Started:<h4>
             ${renderSocialMedia(person.social)}
         `;
 

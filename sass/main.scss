@@ -6,17 +6,31 @@
 body {
     color: $main-color;
     background-color: $body-bg;
+    text-align: center;
 }
 
-h1, h2, h3 { color: $heading-color }
 
-.panel { min-height: 60vh; }
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: $heading-color; }
+h1 {font-size: 42px;}
+p {  font-family: 'Poppins', sans-serif;}
+a {color: #f2f2f2; font-family: 'Poppins', sans-serif; font-weight: bold;}
 
+.panel {
+    padding: 10px 0 10px 0; 
+}
 .panel:nth-child(odd) {
     background-color: #f2f2f2;
-    color: #3f3f3f;
+    color: #2C4859;
 }
 
 #to-top { position: fixed; bottom: 10px; right: 10px; display: none; }
 
-@import 'modules/_footer'
+.hidden{
+    display: none;
+}
+
+#logo{
+    width: 250px;
+}
+
+@import 'modules/_footer';
