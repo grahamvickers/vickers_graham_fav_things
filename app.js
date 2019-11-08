@@ -16,13 +16,13 @@ app.use('/', require('./routes/index'));
 app.use((req, res, next) => {
     var err = new Error('Not Found');
     err.status = 404;
-    err.customMessage = "Oh no! Something horrible went wrong!"
+    err.customMessage = "OOPS! SOMETHING WENT WRONG, TRY AGAIN!"
 
     next(err);
 })
 
 app.use((err, req, res, next) => {
-    res.render('error', {data: err, layout: 'errorPage'});
+    res.render('error', {data: err, layout: 'errorPage'})
 })
 
 app.listen(port, () => {

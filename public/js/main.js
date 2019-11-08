@@ -18,7 +18,7 @@ const myVM = (() => {
         
         let bioContent = `
             <p>${person.bio}<p>
-            <h4>Age I Started:<h4>
+            <h4>Social Media:/<h4>
             ${renderSocialMedia(person.social)}
         `;
 
@@ -35,7 +35,7 @@ const myVM = (() => {
         event.preventDefault(); 
         // debugger;
         let imgSrc = this.previousElementSibling.getAttribute('src')
-        let url = `/${this.getAttribute('href')}`; 
+        let url = `/users/${this.getAttribute('href')}`; 
 
         fetch(url)
             .then(res => res.json()) //parse the json result into a plain object
