@@ -4,28 +4,24 @@ const myVM = (() => {
     // get the user buttons and fire off an async DB query with Fetch
     let userButtons = document.querySelectorAll('.u-link'),
         lightbox = document.querySelector('.lightbox');
-    
-    function renderSocialMedia(socialMedia) {
-        return `<ul class="u-social">
-                    ${socialMedia.map(item => `<li>${item}</li>`).join(' ')}
-                </ul>`
-    }
+
 
     
-    function parseUserData(person) { //person is the database result
+    function parseUserData(sport) { //sport is the database result
         let targetDiv = document.querySelector('.lb-content'),
             targetImg = lightbox.querySelector('img');
         
         let bioContent = `
-            <p>${person.bio}<p>
-            <h4>Social Media:/<h4>
-            ${renderSocialMedia(person.social)}
+            <h1>${sport.title}<h1>
+            <p id="bio">${sport.bio}<p>
+            <h4>Age Started: ${sport.age}<h4>
+
         `;
 
         console.log(bioContent);
 
         targetDiv.innerHTML = bioContent;
-        targetImg.src = person.imgsrc;
+        targetImg.src = sport.imgsrc;
 
         lightbox.classList.add('show-lb');
     }
