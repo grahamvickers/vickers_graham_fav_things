@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     // should really get the user data here and then fetch it thru, but let's try this asynchronously
     console.log('at the main route');
 
-    let query = "SELECT ID, avatar, Name, Logo, JobTitle FROM tbl_card";
+    let query = "SELECT ID, image, title FROM tbl_things";
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
@@ -22,11 +22,11 @@ router.get('/', (req, res) => {
 })
 
 // localhost:3000/anything
-router.get('/:id', (req, res) => {
+router.get('/users/:id', (req, res) => {
     console.log('hit a dynamic route!')
     console.log(req.params.id);
 
-    let query = `SELECT * FROM tbl_bio WHERE profID="${req.params.id}"`;
+    let query = `SELECT * FROM tbl_things WHERE ID="${req.params.id}"`;
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
@@ -35,11 +35,11 @@ router.get('/:id', (req, res) => {
 
         // turn our social property into an array - its just text in the database
         // which isnt really anything we can work with
-        result[0].social = result[0].social.split(",").map(function(item){
-            item = item.trim(); //remove the extraa space from each word
+        // result[0].social = result[0].social.split(",").map(function(item){
+        //     item = item.trim(); //remove the extraa space from each word
 
-            return item;
-        })
+        //     return item;
+        // })
 
         // send the DB query back to the browser
         res.json(result);

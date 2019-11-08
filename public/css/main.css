@@ -28,7 +28,8 @@ nav {
       margin: 0 auto;
       background-color: #F2865E;
       border-radius: 25px;
-      padding: 5px; }
+      padding: 5px;
+      margin-top: 10px; }
     .team .user-panel h1, .team .user-panel h3 {
       margin: 5px 0; }
 
@@ -41,11 +42,11 @@ nav {
   display: none;
   flex-direction: row;
   min-height: 100vh;
-  width: 100%;
+  width: 90%;
   position: fixed;
   top: 0;
   z-index: 5000;
-  padding: 20px;
+  padding: 100px;
   background-color: rgba(44, 72, 89, 0.85); }
   .lightbox .sidebar {
     flex: 1; }
@@ -88,8 +89,20 @@ p {
 
 a {
   color: #f2f2f2;
+  font-size: 20px;
   font-family: 'Poppins', sans-serif;
-  font-weight: bold; }
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px; }
+
+#bio {
+  font-size: 18px; }
+
+#errorImg {
+  width: 60%; }
+
+#backHome:hover {
+  color: #F2865E; }
 
 .panel {
   padding: 10px 0 10px 0; }
